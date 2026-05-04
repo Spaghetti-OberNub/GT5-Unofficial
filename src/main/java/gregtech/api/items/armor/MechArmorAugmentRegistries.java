@@ -3,6 +3,8 @@ package gregtech.api.items.armor;
 import java.util.Collection;
 import java.util.HashMap;
 
+import gregtech.api.items.armor.behaviors.HeadlampBehavior;
+import mods.railcraft.common.items.ItemRail;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 
@@ -552,6 +554,15 @@ public class MechArmorAugmentRegistries {
             .setMinimumCore(1)
             .setCategory(AugmentCategory.Utility)
             .setRarity(EnumRarity.uncommon)
+        ),
+        Headlamp(ItemList.Augment_Headlamp, new AugmentBuilder()
+            .setId("Headlamp")
+            .setItemId("augmentheadlamp")
+            .fitsInto(ArmorType.Helmet)
+            .providesBehaviors(HeadlampBehavior.INSTANCE)
+            .setMinimumCore(1)
+            .setCategory(AugmentCategory.Utility)
+            .setRarity(EnumRarity.common)
         );
         // spotless:on
 

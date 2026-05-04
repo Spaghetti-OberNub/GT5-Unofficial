@@ -2831,6 +2831,7 @@ public enum ItemList implements IItemContainer {
     Augment_ForceField,
     Augment_WaterBreathing,
     Augment_MilkInfusion,
+    Augment_Headlamp,
 
     CompressedOutputBusLuV,
     CompressedOutputBusZPM,
