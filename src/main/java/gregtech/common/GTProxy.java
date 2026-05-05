@@ -40,6 +40,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import javax.annotation.Nullable;
 
+import gregtech.api.items.armor.behaviors.LightHandler;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -1090,6 +1091,7 @@ public class GTProxy implements IFuelHandler {
         GregTechAPI.sPostloadStarted = true;
 
         new ArmorKeybinds();
+        cpw.mods.fml.common.FMLCommonHandler.instance().bus().register(new gregtech.api.items.armor.behaviors.LightHandler());
 
         // This needs to happen late enough that all of the fluids we need have been registered.
         // onInitialization() seems to be too early, as the New Horizons Core Mod registers some fluids in post-load.

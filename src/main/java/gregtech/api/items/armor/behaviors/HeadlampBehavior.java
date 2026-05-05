@@ -24,9 +24,7 @@ public class HeadlampBehavior implements IArmorBehavior {
     public void onArmorTick(@NotNull ArmorContext context) {
         EntityPlayer player = context.getPlayer();
 
-        if (context.isRemote()) {
-            LightHandler.updateHeadlamp(player);
-        }
+            LightHandler.updateArmorStatus(true);
     }
 }
 
